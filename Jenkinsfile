@@ -10,6 +10,7 @@ pipeline {
     stage('Compile') {
       steps {
         container('kong-build') {
+          sh "echo $GH_TOKEN"
 		sh 	 "make dev"
       }
     }
