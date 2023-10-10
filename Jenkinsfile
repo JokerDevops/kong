@@ -4,7 +4,6 @@ pipeline {
   environment {
     PROJECT_NAME = 'orchsym-gateway'
     GH_TOKEN = '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'
-    GITHUB_TOKEN = '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'
   }
 
   stages {
