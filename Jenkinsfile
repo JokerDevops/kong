@@ -6,13 +6,6 @@ pipeline {
   }
 
   stages {
-    stage('NOCI check') {
-      steps {
-        noci action: 'check'
-        load_envs_common()
-      }
-    }
-
     stage('Compile') {
       steps {
         container('kong-build') {
