@@ -9,6 +9,7 @@ pipeline {
     stage('Compile') {
       steps {
         container('kong-build') {
+            sh "sleep 1d"
             sh "make dev"
             sh "make build-release"
             sh "bin/bazel build --config release :kong_el7"
