@@ -9,10 +9,10 @@ pipeline {
     stage('Compile') {
       steps {
         container('kong-build') {
-            sh "sleep 1d"
-            sh "make dev"
-            sh "make build-release"
-            sh "bin/bazel build --config release :kong_el7"
+            script {
+    		def GH_TOKEN = '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'
+		make dev
+		}
         }
       }
     }
